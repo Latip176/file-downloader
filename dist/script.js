@@ -36,6 +36,7 @@ async function fetchData() {
         const data = await response.json();
         
         if(data['data'].data.length == 0) {
+            hiddeLoad();
             const warning = document.createElement("p");
             const container = document.querySelector(".results")
             warning.className = "warning";
