@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+}
+
+body, html {
+    background-color: #DC84F3;
+    font-family: Arial, 'Sans-Serif';
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+}
+.container .file-search-icon {
+    text-align: center;
+}
+.container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.search {
+    text-align: center;
+}
+.search p {
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: Sans-Serif;
+    background: linear-gradient(to right, #662D8C, #ED1E79);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.search input {
+    width: 90%;
+    height: 40px;
+    font-size: 1em;
+    border: 2px solid #FFE7C1;
+    padding: 10px;
+    border-radius: 10px;
+}
+.search input:focus {
+    box-shadow: 0 0 3px 0 ##ED1E79;
+    border-color: #ED1E79;
+    outline: none;
+}
+
+.results {
+    margin: auto;
+    width: 100%;
+}
+.results .content {
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+}
+.results .content .item {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to right, #F3CCF3, #E9A8F2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item div {
+    width: 50%;
+}
+.item p {
+    padding: 3px;
+}
+.item .icon {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+.item .title a, .item .title {
+    color: #0F4C81;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 30ch;
+}
+.item .size {
+    color: rgba(0,0,0,0.5);
+}
+
+@media screen and (min-width: 768px) {
+    .results .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.warning {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.load {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.load .loader {
+    margin-top: 50px;
+    position: absolute;
+}
+.loader {
+  width: 120px;
+  height: 20px;
+  -webkit-mask:linear-gradient(90deg, #000 70%,#0000 0) 0/20%;
+  background:
+   linear-gradient(#ED1E79 0 0) 0/0% no-repeat
+   #ddd;
+  animation: l4 2s infinite steps(6);
+}
+@keyframes l4 {
+    100% {background-size:120%}
+}
+
+.pagination {
+    width: 100%;
+    padding-top: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    margin-top: 250px;
+    font-weight: bold;
+    text-align: center;
+}
